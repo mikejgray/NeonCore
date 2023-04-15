@@ -36,17 +36,22 @@ from neon_core.skills.decorators import intent_handler, intent_file_handler, \
 
 # Patch the base skill
 import ovos_workshop.skills
+
 ovos_workshop.skills.mycroft_skill.MycroftSkill = PatchedMycroftSkill
 
 # Reload ovos_workshop modules with Patched class
 importlib.reload(ovos_workshop.skills.ovos)
 importlib.reload(ovos_workshop.skills.fallback)
-importlib.reload(ovos_workshop.skills.common_query_skill)
 importlib.reload(ovos_workshop.skills)
 
 # Reload neon_utils modules with Patched class
 importlib.reload(neon_utils.skills.neon_fallback_skill)
 importlib.reload(neon_utils.skills)
+
+# Patch ovos_workshop skill
+import ovos_workshop.skills.common_query_skill
+importlib.reload(ovos_workshop.skills.common_query_skill)
+
 
 # Reload mycroft modules with Patched class
 importlib.reload(mycroft.skills.mycroft_skill.mycroft_skill)

@@ -222,6 +222,11 @@ class SkillUtilsTests(unittest.TestCase):
         self.assertTrue(issubclass(OVOSSkill, PatchedMycroftSkill))
         self.assertEqual(OVOSSkill, OVOSSkill2)
 
+        from ovos_workshop.skills.common_query_skill import CommonQuerySkill \
+            as CommonQuerySkill2
+        self.assertTrue(issubclass(CommonQuerySkill2, PatchedMycroftSkill))
+        self.assertEqual(CommonQuerySkill, CommonQuerySkill2)
+
         from neon_utils.skills import NeonFallbackSkill, NeonSkill
         self.assertTrue(issubclass(NeonFallbackSkill, PatchedMycroftSkill))
         self.assertTrue(issubclass(NeonSkill, PatchedMycroftSkill))
