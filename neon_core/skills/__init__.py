@@ -41,6 +41,7 @@ ovos_workshop.skills.mycroft_skill.MycroftSkill = PatchedMycroftSkill
 # Reload ovos_workshop modules with Patched class
 importlib.reload(ovos_workshop.skills.ovos)
 importlib.reload(ovos_workshop.skills.fallback)
+importlib.reload(ovos_workshop.skills.common_query_skill)
 importlib.reload(ovos_workshop.skills)
 
 # Reload neon_utils modules with Patched class
