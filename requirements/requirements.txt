@@ -22,5 +22,3 @@ mock~=5.0
 neon-lang-plugin-libretranslate~=0.2
 neon-utterance-translator-plugin~=0.2
 neon-utterance-normalizer-plugin~=0.1
-
-requests~=2.29
